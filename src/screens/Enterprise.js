@@ -174,21 +174,6 @@ export default function Enterprise() {
     }
     console.log("this is suggestions three", suggestionsThree);
 
-    // const onSuggestHandler = (query) =>{
-    //     setQuery(query)
-    //     setSuggestions([])
-    // }
-
-    // const onSuggestHandlerTwo = (queryTwo) =>{
-    //     setQueryTwo(queryTwo)
-    //     setSuggestionsTwo([])
-    // }
-
-    // const onSuggestHandlerThree = (queryThree) =>{
-    //     setQueryTwo(queryThree)
-    //     setSuggestionsTwo([])
-    // }
-
    const handleBusiness = (e)=>{
         if(residenceType === false){
             setBusinessType(true)

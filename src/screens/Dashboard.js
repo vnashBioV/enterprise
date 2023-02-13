@@ -48,8 +48,7 @@ export default function Dashboard() {
     const [monthFilter, setMonthFilter] = useState(true);
     const [yearFilter, setYearFilter] = useState(false);
     const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' })
-
-    // const [counter, setCounter] = useState(0);
+    const [offersCount, setOffersCount] = useState([]);
 
     const {
         isEnterprise,
@@ -139,22 +138,20 @@ export default function Dashboard() {
     useEffect(() => {
         console.log("the monthly state", monthFilter)
     }, [])
+    
 
+    useEffect(() => {
+        var count = 0
+        allOfTheBooking.map((booking) => {
+            if(booking.bidsCount){
+                return setOffersCount(++count);
+            }
+        })
+        
+    }, [allOfTheBooking])
+    
+    console.log("the bids count is :", offersCount);
     console.log("cargoLink", cargoLink, "enterprise", isEnterprise, "tracking", isTracking, "schedule", isShowSchedule, "request", isShowRequest, "fleetLink", fleetLink, "referalLink", referalLink, "getHelpLink", getHelpLink )
-    // isShowSchedule &&
-    //         <Schedule/>
-    //     }
-    //     {isShowRequest &&
-    //         <BiddingFinalPage/>
-    //     }
-    //     {fleetLink &&
-    //         <Myfleet/>
-    //     }
-    //     {referalLink &&
-    //         <Myreferrals/>
-    //     }
-    //     {getHelpLink &&
-    //         <GetHelp/>
 
     return (
     <div className='dashboard'>
@@ -505,7 +502,14 @@ export default function Dashboard() {
                                 fontWeight:"bold",
                         }}>deliveries</p>
                     </div>
-                    <div className='transition ease-in-out hover:scale-105 hover:cursor-pointer'>
+                    <div className='transition ease-in-out hover:scale-105 hover:cursor-pointer'
+                        onClick={() => {
+                            setIsShowSchedule(false);
+                            setIsTracking(false);
+                            setIsEnterprise(false);
+                            setCargoLink(false);
+                            setIsShowRequest(true);}}
+                    >
                         <div className='stat-ico'>
                             <img src={conversation} alt="" />
                         </div>
@@ -514,7 +518,7 @@ export default function Dashboard() {
                                     fontSize:"21px", 
                                     fontWeight:"bold", 
                                     marginTop:"8px"
-                            }}>0</p>
+                            }}>{offersCount.length ? offersCount : "0"}</p>
                         </div>
                         <p style={{
                                 textTransform:"uppercase", 
@@ -523,7 +527,7 @@ export default function Dashboard() {
                                 fontSize:"11px",
                                 fontWeight:"bold",
                         }}>bids and offers</p>
-                        <p className='bids-i-p'><i class="fa-regular fa-clock"></i>12 pending</p>
+                        <p className='bids-i-p'><i class="fa-regular fa-clock"></i>{offersCount.length ? offersCount : "0"} pending</p>
                     </div>
                 </div>
             </div>

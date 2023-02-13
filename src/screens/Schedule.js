@@ -858,25 +858,52 @@ export default function SchedulingPage({
                                 loads_per_day: testVar !== "" ? testVar.toFixed(0) : moreloadCal,
                                 actual_loads_for_cargo: parseInt(parseInt((cargo?.quantity)/34).toFixed(0)) ? parseInt(parseInt((cargo?.quantity)/34).toFixed(0)) : 0
                             }).then(() => {
-                                var message = 'hello world'
-                                var xhr = new XMLHttpRequest();
-                                xhr.addEventListener('lod', () => {
-                                    console.log(xhr.responseText);
-                                })
-                                xhr.open('GET', 'https://developer.zipi.co.za/my-new-request.php?sendto=' + userEmail + 
-                                    '&name=' + company + 
-                                    '&date=' + new Date().toISOString().substring(0,10) +
-                                    '&bookingref=' + bookingref +
-                                    '&cargoquantity=' + cargoquantity +
-                                    '&starting_location=' + starting_location +
-                                    '&destination=' + destination +
-                                    '&start_date=' + start_date +
-                                    '&due_date=' + due_date +
-                                    '&total_loads=' + total_loads +
-                                    '&vehicle_type_required=' + vehicle_type_required +
-                                    '&asking_rate=' + asking_rate
-                                )
-                                xhr.send()
+                                // var message = 'hello world'
+                                // var xhr = new XMLHttpRequest();
+                                // xhr.addEventListener('lod', () => {
+                                //     console.log(xhr.responseText);
+                                // })
+                                // xhr.open('GET', 'https://developer.zipi.co.za/my-new-request.php?sendto=' + userEmail + 
+                                //     '&name=' + company + 
+                                //     '&date=' + new Date().toISOString().substring(0,10) +
+                                //     '&bookingref=' + bookingref +
+                                //     '&cargoquantity=' + cargoquantity +
+                                //     '&starting_location=' + starting_location +
+                                //     '&destination=' + destination +
+                                //     '&start_date=' + start_date +
+                                //     '&due_date=' + due_date +
+                                //     '&total_loads=' + total_loads +
+                                //     '&vehicle_type_required=' + vehicle_type_required +
+                                //     '&asking_rate=' + asking_rate
+                                // )
+                                // xhr.send()
+                                const mailer_data = {
+                                    send_to: userEmail,
+                                    mail_subject: 'Zipi Pre Release',
+                                    date: new Date().toISOString().substring(0,10),
+                                    bookingref: bookingref,
+                                    cargoquantity: cargoquantity,
+                                    starting_location: starting_location,
+                                    destination: destination,
+                                    start_date: start_date,
+                                    due_date: due_date,
+                                    total_loads: total_loads,
+                                    vehicle_type_required: vehicle_type_required,
+                                    asking_rate: asking_rate 
+                                  };
+                           
+                                   fetch('http://35.222.146.82:9090/api/v1/mail/', {
+                                    method: 'POST',
+                                    mode: 'no-cors',
+                                    headers: {
+                                      'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify({mailer_data}),
+                                  })
+                                    .then(res => {
+                                      res.json().then(_ => console.log(_));
+                                    })
+                                    .catch(err => console.log(err));
                                 setTimeout(() => {
                                     setIsShowSchedule(false);
                                     setIsTracking(false);
