@@ -142,7 +142,7 @@
 .add-contacts-wrapper > div:nth-child(1)::-webkit-scrollbar, 
 .add-contacts-wrapper > div:nth-child(2)::-webkit-scrollbar,
 .cargo-detail::-webkit-scrollbar,
-.tracking-pannel::-webkit-scrollbar{
+.tracking-pannel::-webkit-scrollbar, .booking-dash::-webkit-scrollbar{
   display: none;
 }
 .add-contacts-wrapper > div:nth-child(2){

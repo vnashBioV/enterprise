@@ -26,6 +26,7 @@ import MonthlyComponent from '../components/MonthlyComponent';
 import YearlyFilter from '../components/YearlyFilter';
 import BiddingFinalPage from '../components/BiddingFinalPage';
 import { useMediaQuery } from 'react-responsive'
+import Profile from '../components/Profile';
 
 export default function Dashboard() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -35,13 +36,7 @@ export default function Dashboard() {
     const [userEmail,setUserEmail] = useState("")
     const [userUid, setUserUid] = useState("");
     const navigate = useNavigate();
-    const [fleetLink, setFleetLink] = useState(false);
-    const [referalLink, setReferalLink] = useState(false);
-    const [profileLink, setProfileLink] = useState(false);
-    const [analysisLink, setAnalysisLink] = useState(false);
-    const [walletLink, setWalletLink] = useState(false);
-    const [getHelpLink, setGetHelpLink] = useState(false);
-    const [contactLink, setContactLink] = useState(false);
+    
     const [dashTitle, setDashTitle] = useState("");
     const [showNavigation, setShowNavigation] = useState(false);
     const [showNavigationX, setShowNavigationX] = useState(false);
@@ -60,7 +55,21 @@ export default function Dashboard() {
         setIsShowRequest,
         isShowRequest,
         cargoLink,
-        setCargoLink
+        setCargoLink,
+        fleetLink,
+        setFleetLink,
+        referalLink, 
+        setReferalLink,
+        profileLink,
+        setProfileLink,
+        analysisLink,
+        setAnalysisLink,
+        walletLink, 
+        setWalletLink,
+        getHelpLink,
+        setGetHelpLink,
+        contactLink,
+        setContactLink
     } = useStateContext();
 
     const { 
@@ -222,13 +231,23 @@ export default function Dashboard() {
                     </div>
                     <div className={`${!isChevUp ? "account-menu" : "account-menu-open"} transition-all ease-in-out`}>
                         <div className="moreOptions">
-                            <Link to='/profile' class="options">
-                                    <i class={`fa-solid fa-briefcase dash-link-icon ${profileLink && "active"}`}></i>Profile
-                            </Link>
-                            <Link to='/wallet' class="options">
+                            <div onClick={() => {
+                                setCargoLink(false)
+                                setFleetLink(false)
+                                setReferalLink(false)
+                                setProfileLink(true)
+                                setAnalysisLink(false)
+                                setWalletLink(false)
+                                setGetHelpLink(false)
+                                setContactLink(false)
+                                setIsEnterprise(false)
+                            }} className={`options ${profileLink && "active"}`}>
+                                    <i className={`fa-solid fa-briefcase dash-link-icon`}></i>Profile
+                            </div>
+                            <Link to='/wallet' className="options">
                                 <i class="fa-sharp fa-solid fa-wallet dash-link-icon"></i>Wallet
                             </Link>
-                            <Link to='/'  class="options"
+                            <Link to='/'  className="options"
                                     onClick={()=> {
                                         firebase.auth().signOut().then(() => {
                                             navigate('/')
@@ -236,7 +255,7 @@ export default function Dashboard() {
                                             alert(error)  
                                             });
                                     }}
-                                ><i class="fa-sharp fa-solid fa-right-from-bracket dash-link-icon"></i>Sign out
+                                ><i className="fa-sharp fa-solid fa-right-from-bracket dash-link-icon"></i>Sign out
                             </Link>        
                         </div>    
                     </div>
@@ -246,7 +265,7 @@ export default function Dashboard() {
                             navigate('/contactLink')
                         }}
                     >
-                        <i class={`fa-solid fa-address-book dash-link-icon`}></i>Contact
+                        <i className={`fa-solid fa-address-book dash-link-icon`}></i>Contact
                     </div>
                     <div
                         className={`transition-all cursor-pointer ease-in-out ${getHelpLink && "active"} options`}
@@ -254,7 +273,7 @@ export default function Dashboard() {
                             navigate('/gethelp')
                         }}
                     >
-                        <i class={`fa-solid fa-circle-info dash-link-icon`}></i>Get help
+                        <i className={`fa-solid fa-circle-info dash-link-icon`}></i>Get help
                     </div>
         
                 </div>
@@ -587,6 +606,10 @@ export default function Dashboard() {
         {getHelpLink &&
             <GetHelp/>
         } 
+        {profileLink &&
+            <Profile/>
+        }
+
         </div>
         }
         {isSpinner && <Loader/>}

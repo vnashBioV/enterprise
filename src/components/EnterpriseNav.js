@@ -24,7 +24,21 @@ export default function EnterpriseNav({
       setIsShowRequest,
       isShowRequest,
       setCargoLink,
-      cargoLink
+      cargoLink,
+      fleetLink,
+      setFleetLink,
+      referalLink, 
+      setReferalLink,
+      profileLink,
+      setProfileLink,
+      analysisLink,
+      setAnalysisLink,
+      walletLink, 
+      setWalletLink,
+      getHelpLink,
+      setGetHelpLink,
+      contactLink,
+      setContactLink
   } = useStateContext();
 
   return (
@@ -38,6 +52,13 @@ export default function EnterpriseNav({
                 setIsTracking(false)
                 setIsShowSchedule(false)
                 setIsShowRequest(false)
+                setFleetLink(false)
+                setReferalLink(false)
+                setProfileLink(false)
+                setAnalysisLink(false)
+                setWalletLink(false)
+                setGetHelpLink(false)
+                setContactLink(false)
              }}
             ></i><p style={{color:"#fff", marginLeft:"10px", fontSize:"20px", marginBottom:"0px"}}>My Cargo</p>
           </div>
