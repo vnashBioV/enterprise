@@ -293,7 +293,7 @@ function TrackingPage({
         } */}
          {clickOnRight &&
             <div className='login-alert cargo-alertt' style={{border:"1px solid #c3c3c3"}}>
-                <p style={{fontSize:"13.5px"}}>Please click on right section to see the booking information</p>
+                <p style={{fontSize:"1rem"}}>Please click on right section to see the booking information</p>
                 <button className='alert-btnn' onClick={() => setClickOnRight(false) }>Ok</button>
             </div>
         } 

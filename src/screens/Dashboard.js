@@ -468,7 +468,7 @@ export default function Dashboard() {
                         </div>
                         <div className='dash-mid-values'>
                             <p style={{
-                                    fontSize:"21px", 
+                                    fontSize:"2rem", 
                                     fontWeight:"bold", 
                                     marginTop:"8px"
                             }}>0</p>
@@ -477,7 +477,7 @@ export default function Dashboard() {
                                 textTransform:"uppercase", 
                                 color:"#9a9a9a",
                                 marginTop:"3px",
-                                fontSize:"11px",
+                                fontSize:"1rem",
                                 fontWeight:"bold",
                         }}>success rate</p>
                     </div>
@@ -488,7 +488,7 @@ export default function Dashboard() {
                         </div>
                         <div className='dash-mid-values'>
                             <p style={{
-                                    fontSize:"21px", 
+                                    fontSize:"2rem", 
                                     fontWeight:"bold", 
                                     marginTop:"8px"
                             }}>0 hours</p>
@@ -497,7 +497,7 @@ export default function Dashboard() {
                                 textTransform:"uppercase", 
                                 color:"#9a9a9a",
                                 marginTop:"3px",
-                                fontSize:"11px",
+                                fontSize:"1rem",
                                 fontWeight:"bold",
                         }}>average trip time</p>
                     </div>
@@ -508,7 +508,7 @@ export default function Dashboard() {
                         </div>
                         <div className='dash-mid-values'>
                             <p style={{
-                                    fontSize:"21px", 
+                                    fontSize:"2rem", 
                                     fontWeight:"bold", 
                                     marginTop:"8px"
                             }}>0</p>
@@ -517,7 +517,7 @@ export default function Dashboard() {
                                 textTransform:"uppercase", 
                                 color:"#9a9a9a",
                                 marginTop:"3px",
-                                fontSize:"11px",
+                                fontSize:"1rem",
                                 fontWeight:"bold",
                         }}>deliveries</p>
                     </div>
@@ -534,7 +534,7 @@ export default function Dashboard() {
                         </div>
                         <div className='dash-mid-values'>
                             <p style={{
-                                    fontSize:"21px", 
+                                    fontSize:"2rem", 
                                     fontWeight:"bold", 
                                     marginTop:"8px"
                             }}>{offersCount.length ? offersCount : "0"}</p>
@@ -543,7 +543,7 @@ export default function Dashboard() {
                                 textTransform:"uppercase", 
                                 color:"#9a9a9a",
                                 marginTop:"3px",
-                                fontSize:"11px",
+                                fontSize:"1rem",
                                 fontWeight:"bold",
                         }}>bids and offers</p>
                         <p className='bids-i-p'><i class="fa-regular fa-clock"></i>{offersCount.length ? offersCount : "0"} pending</p>
@@ -570,6 +570,7 @@ export default function Dashboard() {
                                 height:"fit-content",
                                 marginTop:"10%",
                                 marginBottom:"9%",
+                                fontSize:"1.3rem",
                             }}>
                     <img src={emptyIcon} width={100} height={100}/>
                     Please make some bookings, it would appear you have none.

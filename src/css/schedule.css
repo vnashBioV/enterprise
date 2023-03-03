@@ -81,9 +81,10 @@
 }
 .schedule-sum > div:nth-child(1) > div:nth-child(1) > p:nth-child(1){
   margin-bottom: 15px;
+  font-size: 1rem;
 }
 .schedule-sum > div:nth-child(1) > div:nth-child(1) > div > p{
-  font-size: 13px;
+  font-size: 1rem;
   color: #787878;
   height: 66px;
 }
@@ -92,11 +93,17 @@
   width: 80%;
 }
 .schedule-sum > div:nth-child(1) > div:nth-child(2) > div > p:nth-child(1){
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: bold;
 }
 .schedule-sum > div:nth-child(1) > div:nth-child(2) > div > p:nth-child(2){
-  font-size: 11px;
+  font-size: .9rem;
+}
+
+.cargo-sum-sched > div:nth-child(1) > h1, 
+.pick-the-date > div > div > p,
+.time-loads p{
+  font-size: 1rem;
 }
 
 .schedule-sum > div:nth-child(1) > div:nth-child(2) > div > p:nth-child(3){
@@ -217,8 +224,10 @@
   font-weight: normal;
   text-align: end;
 }
-.cargo-sum-sched > div > h3, .cargo-sum-sched > div > p{
-  font-size: 13px;
+.cargo-sum-sched > div > h3, .cargo-sum-sched > div > p,
+.cargo-sum-sched > div:nth-child(2) > div > div p,
+.prerequisites p, .insurance h2{
+  font-size: 1rem;
 }
 .cargo-sum-sched > div > p{
   font-weight: normal;
@@ -228,6 +237,9 @@
   /* border: solid; */
   display: flex;
   justify-content: space-between;
+}
+.hazardous-cargo p, .hazardous-cargo > div p, .temperature-controlled > div p{
+  font-size: 1rem;
 }
 .hazardous-wrapper{
   display: flex;
@@ -268,7 +280,7 @@
   text-decoration: none;
   padding: 8px 13px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 1rem;
 }
 .vehicle, .prerequisites{
   border-left: 1px solid !important;
@@ -298,16 +310,16 @@
 .max-payload > div{
   width: 25%;
 }
-.insurance > h2{
+/* .insurance > h2{
   font-size: 13px;
-}
+} */
 .insurance{
   flex-direction: column;
   border: 1px solid #b1b1b1;
   margin: 10px;
 }
 .schedule-the-cargo > h2{
-  font-size: 14px;
+  font-size: 1rem;
   margin-top: 177px;
 }
 .schedule-the-cargo{
@@ -315,7 +327,7 @@
   /* border: solid; */
 }
 .schedule-the-cargo >p{
-  font-size: 12px;
+  font-size: .9rem;
 }
 .pick-the-date{
   width: 100%;
@@ -346,8 +358,11 @@
   background: #fff;
   width: 28px;
   height: 28px;
-  font-size: 12px;
+  font-size: 1rem;
   cursor: pointer;
+}
+.schedule-the-cargo > label{
+  font-size: 1rem !important;
 }
 .exclude-dates{
   background: #fff;
@@ -363,8 +378,11 @@
   border: transparent;
   width: 65%;
 }
+.schedule-navigation p{
+  font-size: 1rem;
+}
 .book-btn-proceed > button{
-  font-size: 13px;
+  font-size: 1rem;
   border: transparent;
   border-radius: 0px 10px 10px 0px;
   background: #f9dd07;
@@ -407,7 +425,7 @@
   margin-top: 25px;
 }
 .gate-duration > p{
-  font-size: 14px;
+  font-size: 1rem;
 }
 .gate-in-out{
   display: flex;
@@ -416,7 +434,7 @@
 }
 .gate-in-out > label{
   font-weight: normal;
-  font-size: 13px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -434,7 +452,7 @@
   width: 95px;
   border-radius: 10px;
   border: transparent;
-  font-size: 13px;
+  font-size: 1rem;
   height: 29px;
   background: #e8e8e8;
 }
@@ -548,7 +566,7 @@ input[type=range]:focus::-ms-fill-upper {
   margin-bottom: 10px;
 }
 .track-label > div > p{
-  font-size:11px;
+  font-size:.7rem;
   line-height: 9px;
 }
 .load-required-date{
@@ -582,7 +600,9 @@ input[type=range]:focus::-ms-fill-upper {
   width: 91%;
   cursor: pointer;
   color: #505050;
+  font-size: .8rem;
 }
+
 .react-datepicker__input-container{
   /* display: flex !important;
   align-items: center;

@@ -5,11 +5,14 @@
     border: transparent;
     background: #e8e8e8;
     width: 48.8%;
-    font-size: 13.5px;
+    font-size: 1rem;
 }
 .cargo-modal > div > select{
     padding: 8px 15px;
     width: 48.8%;
+}
+.cargo-modal > p:nth-child(5){
+    font-size: 1rem;
 }
 .cargo-modal > div{
     display: flex;
@@ -48,7 +51,7 @@
 }
 .cargo-modal >label{
     margin-top: 8px;
-    font-size: 13px;
+    font-size: 1rem;
 }
 .max-min{
     width: 30%;
@@ -77,7 +80,7 @@ input[type="file"]{
     border-radius: 10px;
     color: grey;
     cursor: pointer;
-    font-size: 13.5px;
+    font-size: 1rem;
 }
 .un-number > label{
     margin-right: 0;

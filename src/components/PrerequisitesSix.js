@@ -264,7 +264,7 @@ export default function Summary({
                         padding:"3px 19px", 
                         borderRadius:"10px", 
                         boxShadow:"0px 0px 2px 0px", 
-                        fontSize:"13.5px",
+                        fontSize:"1rem",
                         backgroundColor:"#fff"
                 }} onClick={() => setOpenPreSix(false)}>Cancel</button>
             <button 

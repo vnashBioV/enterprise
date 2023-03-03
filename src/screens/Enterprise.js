@@ -886,7 +886,7 @@ export default function Enterprise() {
                             <div>
                                 <h2>Car Carrier</h2>
                                 <p style={{
-                                        fontSize: "10px",
+                                        fontSize: "0.7rem",
                                         fontStyle: "italic",
                                         color: "grey"
                                     }}>Recommended</p>
@@ -930,7 +930,7 @@ export default function Enterprise() {
                         </div>
                     </div>
 
-                    <p style={{marginTop:"10px"}}>Abnormal (34+ Tons)</p>
+                    <p style={{marginTop:"10px", fontSize:"1rem"}}>Abnormal (34+ Tons)</p>
 
                     <div className='distribution-vehicle'>
                         <div>

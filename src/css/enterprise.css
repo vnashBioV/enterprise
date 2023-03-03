@@ -46,6 +46,7 @@
 }
 .contact-wrapper > div > p:nth-child(1){
   font-weight: bold;
+  font-size: 1rem;
 }
 .contact-wrapper > div > p:nth-child(2){
   font-size: 12px;
@@ -79,6 +80,7 @@
 }
 .address-type > label.btn-address-type, .address-type > label.deactivate{
   margin-right: 0;
+  font-size: 1rem;
 }
 
 .btn-address-type{
@@ -133,7 +135,7 @@
   border: transparent;
   background: #e8e8e8;
   width: 100%;
-  font-size: 13.5px;
+  font-size: 1rem;
 }
 .name-div{
   width:48.8%;
@@ -144,6 +146,12 @@
 .cargo-detail::-webkit-scrollbar,
 .tracking-pannel::-webkit-scrollbar, .booking-dash::-webkit-scrollbar{
   display: none;
+}
+.location-style > h1, .location-two > h1, .cargo > h1, .enter-wrapper > div > div:nth-child(4) > h2{
+  font-size: 1.3rem;
+}
+.location-title > p, .cargo > p, .enter-wrapper > div > div:nth-child(4) > p:nth-child(2), .enter-wrapper > div > div:nth-child(4) > p:nth-child(3){
+  font-size: 1rem;
 }
 .add-contacts-wrapper > div:nth-child(2){
   width: 242px;
@@ -158,7 +166,7 @@
   border: transparent;
   background: #e8e8e8;
   width: 100%;
-  font-size: 13.5px;
+  font-size: 1rem;
 }
 .add-contacts-wrapper > div > select{
   color: #686868;
@@ -173,12 +181,13 @@
   font-family: sans-serif;
   resize: none;
   width: 100%;
-  font-size: 13.5px;
+  font-size: 0.9rem;
 }
 .complex-label{
   margin-top: 7px;
   margin-left: 10px;
   color: #878787;
+  font-size: 1rem;
 }
 .operating-hours{
   width: 100%;
@@ -239,7 +248,13 @@
   border: transparent;
   background: #e8e8e8;
   width: 48.8%;
-  font-size: 13.5px;
+  font-size: 1rem;
+}
+.add-contacts-wrapper > div:nth-child(2) > div > p{
+  font-size: 0.9rem;
+}
+.add-contacts-wrapper > div:nth-child(2) > h2{
+  font-size: 1.3rem;
 }
 .add-to-contact{
   margin:10px 0;
@@ -254,7 +269,7 @@
   border: transparent;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 13.5px;
+  font-size: 1rem;
 }
 .hide-date{
   display: none;
@@ -363,7 +378,7 @@
 }
 .pill-container > div:nth-child(3) > h1{
   font-weight: normal;
-  font-size: 11px;
+  font-size: 0.8rem;
 }
 .cargo-quantity{
   width: 61%;
@@ -482,7 +497,7 @@
   /* opacity: 0.8; */
 }
 .distribution-vehicle > div > div:nth-child(2) > p, .distribution-vehicle > div > div:nth-child(2) > h2{
-  font-size: 12px;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 /* input[type=time]::-webkit-calendar-picker-indicator {
@@ -505,8 +520,8 @@
   height: 100%;
   border-radius: 10px;
   background: #f3f3f3;
-  height: 52px;
-  width: 37%; 
+  height: 64px;
+  width: 49%;
   cursor: pointer;
 }
 .suggestionBlock > p{
@@ -542,10 +557,16 @@
   pointer-events: none;
 }
 .cargo-for > h1{
-  font-size: 13px;
+  font-size: 1rem;
+}
+.cargo-modal > h1{
+  font-size: 1.3rem;
+}
+.cargo-modal > p:nth-child(2){
+  font-size: 1rem;
 }
 .cargo-for > p{
-  font-size: 11px;
+  font-size: 0.8rem;
   line-height: 12px;
 }
 .search-results{

@@ -372,10 +372,10 @@
     font-weight: bolder ;
     margin-top: 13px;
     margin-bottom: 4px ;
-    font-size: 21px;
+    font-size: 1.6rem;
   }
   #informatics p {
-    font-size: 0.98rem;
+    font-size: 1.2rem;
   }
   #absolutely {
     max-width: 390px;
@@ -403,7 +403,7 @@
   #step1 > div > button.btnTertiary,
   #step3 > div.btnHolder > button.btnTertiary{
     color: #000;
-    font-size: 13.5px;
+    font-size: 1rem;
   }
 
   #step4 > div:nth-child(3) > label > input,
@@ -416,6 +416,7 @@
   #step2 > p, 
   #step3 > p{
     margin: 9px 0px;
+    font-size: 0.9rem;
   }
 
   .loginInput {
@@ -425,23 +426,28 @@
     border: 0;
     width: 100%;
     margin: auto auto 9px auto;
-    font-size: 12px;
+    font-size: 1rem;
     color: #000;
+  }
+  .loginInput:focus{
+    outline: none;
   }
   .theBackground h1 {
     margin-bottom: 56px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 2rem;
   }
   #step4 > h1{
     margin: 0;
-    font-size: 17px;
+    font-size: 1.5rem;
   }
   #step4 > p{
     margin: 8px 0 18px 0px;
+    font-size: 0.9rem;
   }
   #step4 > div > label{
     color: #000;
+    font-size: 0.8rem;
   }
   .theBackground p {
     margin: 20px 0 ;
@@ -480,6 +486,7 @@
   #floatingP {
     position: absolute ;
     top: -29px ;
+    font-size: 1rem;
   }
   .btnHolder {
     margin-top: 22px;
@@ -488,7 +495,7 @@
     justify-content: space-between ;
   }
 .theBackground button {
-    font-size: 0.77rem ;
+    font-size: 1rem ;
     font-weight: 600 ;
   }
   .theBackground button:hover {
@@ -499,7 +506,7 @@
     background: #ffe200;
     border: 0;
     border-radius: 100px;
-    font-size: 0.87rem !important;
+    font-size: 1rem !important;
   }
   .btnTertiary {
     background: transparent ;
@@ -790,11 +797,11 @@
     position: relative;
   }
   #absolutely > div > p{
-    font-size: 11.6px;
+    font-size: 1rem;
     margin-bottom: 17px;
     line-height: 15px;;
   }#absolutely > div > div.btnHolder > button.btnTertiary{
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: normal;
   }
   .on-boarding{
@@ -843,7 +850,7 @@
     font-weight: bold;
   }
   .bottom-board-child > div > div:nth-child(1) > p{
-    font-size: 12px;
+    font-size: 1rem;
     cursor: pointer;
     margin: 0 !important;
     padding: 0!important;
@@ -859,7 +866,7 @@
   .bottom-board-child > div > div:nth-child(2) > h2{
     font-weight: bold;
     color: #494949;
-    font-size: 18.3px;
+    font-size: 1.5rem;
   }
   .bottom-board-child > div > div:nth-child(2) > div{
     width: 183px;
@@ -887,7 +894,7 @@
   .bottom-board-child > div > div:nth-child(3) > p:nth-child(1){
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #494949;
     text-align: center;
@@ -895,6 +902,7 @@
   .bottom-board-child > div > div:nth-child(3) > p:nth-child(2){
    text-align: center;
    color: #494949;
+   font-size: 0.9rem;
   }
   .indicators{
     display: flex !important;
@@ -935,13 +943,13 @@
   }
   .last-block > h2{
     text-align: center;
-    font-size: 17px;
+    font-size: 1.5rem;
     color: #494949;
     padding-bottom: 39px !important;
   }
   .last-block > p{
     text-align: center;
-    font-size: 13px !important;
+    font-size: 1rem !important;
     font-weight: normal;
   }
   .board-options{
@@ -975,10 +983,14 @@
   .board-options > p{
     font-weight: bold !important; 
     color: #494949;
+    font-size: 1rem;
+  }
+  #userSteps > b{
+    font-size: 0.9rem;
   }
   #step2 > div.btnHolder > button.btnTertiary{
     color: #000;
-    font-size: 13px;
+    font-size: 1rem;
   }
   .error-login-message{
     position: absolute;
@@ -1001,6 +1013,7 @@
   }
   .error-login-message > p{
     text-align: center;
+    font-size: 1rem;
   }
   .error-login-message > button{
     width: 69px;

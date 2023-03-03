@@ -60,7 +60,7 @@ export default function EnterpriseNav({
                 setGetHelpLink(false)
                 setContactLink(false)
              }}
-            ></i><p style={{color:"#fff", marginLeft:"10px", fontSize:"20px", marginBottom:"0px"}}>My Cargo</p>
+            ></i><p style={{color:"#fff", marginLeft:"10px", fontSize:"1.8rem", marginBottom:"0px"}}>My Cargo</p>
           </div>
             {/* <div className='logo'>
                 <Link to={'/enterprise'}><img src={logo} alt="" /></Link>

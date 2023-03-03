@@ -16,6 +16,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { MobileTimePicker } from '@mui/x-date-pickers/MobileTimePicker';
 import { DesktopTimePicker } from '@mui/x-date-pickers/DesktopTimePicker';
+import { createTheme, ThemeProvider} from '@mui/material/styles';
 
 export default function AddLocationOneContact({
         setBookingArray, 
@@ -118,7 +119,7 @@ export default function AddLocationOneContact({
                 ...prevState.details,
                 OperatingHours:{
                     ...prevState?.details?.OperatingHours,
-                        open:open.$d.toString().substring(15,21)
+                        open:open?.toString().substring(15,21)
                 }
             } 
         }))
@@ -129,7 +130,7 @@ export default function AddLocationOneContact({
                 ...prevState.details,
                 OperatingHours:{
                     ...prevState?.details?.OperatingHours,
-                        close:close.$d.toString().substring(15,21)
+                        close:close?.toString().substring(15,21)
                 }
             } 
         }))
@@ -139,8 +140,8 @@ export default function AddLocationOneContact({
             details:{
                 ...prevState.details,
                 PublicHoliday:{
-                    ...prevState.details.PublicHoliday,
-                        open:pubOpen.$d.toString().substring(15,21)
+                    ...prevState.details?.PublicHoliday,
+                        open:pubOpen?.toString().substring(15,21)
                 }
             } 
         }))
@@ -151,12 +152,27 @@ export default function AddLocationOneContact({
                 ...prevState.details,
                 PublicHoliday:{
                     ...prevState?.details?.PublicHoliday,
-                        close:pubClose.$d.toString().substring(15,21)
+                        close:pubClose?.toString().substring(15,21)
                 }
             } 
         }))
 
     }, [open, close, pubOpen, pubClose])
+
+    const theme = createTheme({
+        components: {
+          // Name of the component
+          TimePicker: {
+            styleOverrides: {
+              // Name of the slot
+              root: {
+                // Some CSS
+                background: 'blue',
+              },
+            },
+          },
+        },
+    });
     
     console.log("Operating hours", bookingArray?.details?.OperatingHours)
 
@@ -322,11 +338,11 @@ export default function AddLocationOneContact({
                         /> */}
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <Stack spacing={3}>
-                                <TimePicker
-                                value={open}
-                                onChange={setOpen}
-                                renderInput={(params) => <TextField {...params} />}
-                                />
+                                    <TimePicker
+                                        value={open}
+                                        onChange={setOpen}
+                                        renderInput={(params) => <TextField {...params} />}
+                                    />
                             </Stack>
                         </LocalizationProvider>
                     </div>
@@ -352,9 +368,9 @@ export default function AddLocationOneContact({
                          <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <Stack spacing={3}>
                                 <TimePicker
-                                value={close}
-                                onChange={setClose}
-                                renderInput={(params) => <TextField {...params} />}
+                                    value={close}
+                                    onChange={setClose}
+                                    renderInput={(params) => <TextField {...params} />}
                                 />
                             </Stack>
                         </LocalizationProvider>
@@ -362,7 +378,7 @@ export default function AddLocationOneContact({
                 </div>
             </div>
             <div className='operating-hours'>
-                <h3 style={{fontSize:"13px", marginTop:"10px", marginBottom:"12px"}}>Public Holidays</h3>
+                <h3 style={{fontSize:"1rem", marginTop:"10px", marginBottom:"12px"}}>Public Holidays</h3>
                 <div>
                     <div>
                         {/* <input 

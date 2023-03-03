@@ -272,7 +272,7 @@
     color: black;
     border-radius: 24px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 .dash-act-links > li > a{
@@ -289,7 +289,7 @@
     justify-content: center;
     align-items: center;
     appearance: none;
-    font-size: 14px;
+    font-size: 1.3rem;
     cursor: pointer;
 }
  
@@ -348,6 +348,9 @@
     height: 121px;
     max-height: 121px;
     overflow: scroll;
+}
+.right-top-section > p{
+    font-size: 1rem;
 }
 .book-name{
     display: flex;

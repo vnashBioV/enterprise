@@ -6,7 +6,7 @@ import '../css/login.css'
 import ForgotPass from '../components/ForgotPass';
 import dark from '../icons/dark.png'
 import darkLogo from '../icons/we-tracking-logo.png'
-import cargo from '../icons/Cargo.svg';
+import cargo from '../icons/cargo.svg';
 import Fleet from '../icons/Fleet-Owner.svg';
 import Sales from '../icons/Sales-Agent.svg';
 import { useForm } from "react-hook-form";
@@ -471,7 +471,7 @@ export default function Register() {
                   </div>
               }
               {sucess &&
-                 <div style={{width:"62%", height:"fit-content"}} className='error-login-message'>
+                 <div style={{width:"62%", height:"fit-content", fontSize:"1rem"}} className='error-login-message'>
                     <p>Account created successfully!!</p>
                 </div>
               }

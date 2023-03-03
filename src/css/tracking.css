@@ -12,6 +12,7 @@
 .tracking > h1{
     font-weight: normal;
     padding: 0 6%;
+    font-size: 1rem;
 }
 .tracking-child > div:nth-child(1){
     width: 70%; 
@@ -24,6 +25,7 @@
 .tracking-child > div:nth-child(2) > h1{
     font-weight: normal;
     padding-left: 10px;
+    font-size: 1rem;
 }
 .bound-btns{
     display: flex;
@@ -49,6 +51,7 @@
 }
 .tracking-pannel > h1{
     font-weight: normal;
+    font-size: 1rem;
 }
 .search-panel{
     margin-top: 8px;
@@ -62,7 +65,7 @@
     border-radius: 10px;
     border: transparent;
     background: #e1e1e1;
-    font-size: 13px
+    font-size: 1rem
 }
 .search-panel > div{
     padding: 11px 10px;
@@ -121,11 +124,14 @@
 .load-shipping > div > p{
     word-break: break-all;
     white-space: normal;
+    font-size: 1rem;
 }
 .cargo-cargo{
     display: flex;
     justify-content: space-between;
-
+}
+.cargo-cargo > div > p, .cargo-cargo > div > div > div > p{
+    font-size: 1rem;
 }
 .cargo-cargo > div{
     margin-top: 14px;
@@ -144,11 +150,14 @@
     color: #fff;
     height: 29px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
     width: 175px;
     text-decoration: none;
+}
+.print-block > span > span > p, .print-block > div > span:nth-child(2) > p{
+    font-size: 1rem;
 }
 .btn-download > span{
     padding: 0 10px;
@@ -234,6 +243,9 @@
     display: flex;
     font-weight: bold;
 }
+.bidding-navigation > p{
+    font-size: 1rem;
+}
 .nav-nav-link{
     text-decoration: none;
     display: flex;
@@ -251,14 +263,17 @@
 }
 .this-booking{
     padding: 10px;
-    border: 1px solid #e7e7e7;
+    border: 2px solid #e7e7e7;
     margin-bottom: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
 .this-booking > div > h2{
     font-weight: normal;
-    font-size: 14px;
+    font-size: 1rem;
+}
+.this-booking > div.book-populate > p{
+    font-size: .8rem;
 }
 .arrow-block{
     display: flex;
@@ -267,10 +282,12 @@
     padding: 4px;
     background: #e5e5e5;
     margin-top: 11px;
+    border-radius: 0.8rem;
+    background: #ffe200;
 }
 .arrow-block > i{
     font-size: 13px;
-    color: grey;
+    color: #000;
 }
 .book-populate{
     cursor: pointer;

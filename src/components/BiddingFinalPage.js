@@ -171,7 +171,7 @@ export default function BiddingFinalPage() {
             </div>
             <div>
                 <div className='tril-deal-container'>
-                    <h1 style={{fontSize:"16px"}}>Trip Deals</h1>
+                    <h1 style={{fontSize:"1rem"}}>Trip Deals</h1>
                     <div><button onClick={()=> {
                         const bookingRef = firebase.database().ref('/booking/' + selectedBook.booking_id);
                         bookingRef.remove().then(() =>{

@@ -712,7 +712,7 @@ export default function SchedulingPage({
                     </div>
                     <div className='time-loads'>
                         <p>Time vs Loads</p>
-                        <p style={{fontSize:"10px"}}>Move the slider to see how it's going to affect loads and duration.</p>
+                        <p style={{fontSize:".7rem"}}>Move the slider to see how it's going to affect loads and duration.</p>
                         {/* <input 
                             type="range" 
                             max={dates.length} 
@@ -760,13 +760,13 @@ export default function SchedulingPage({
                                 : <></>
                             }
                             
-                            <p style={{fontSize: '11px'}}>Est. Date of Completion</p>
-                            <p style={{fontSize: '14px'}}>{endDate.toISOString().substring(0,10)}</p>
+                            <p style={{fontSize: '.7rem'}}>Est. Date of Completion</p>
+                            <p style={{fontSize: '1rem'}}>{endDate.toISOString().substring(0,10)}</p>
                         </div>
                     </div>
                 </div>
                 <span style={{ display:"flex"}}>
-                    <h2 style={{fontSize:"11px", fontWeight:"normal", marginBottom:"10px"}}>Rate Indication per Truck</h2><i className="fa-solid fa-info"></i>
+                    <h2 style={{fontSize:".7rem", fontWeight:"normal", marginBottom:"10px"}}>Rate Indication per Truck</h2><i className="fa-solid fa-info"></i>
                 </span>
                 <span style={{display:"flex"}} className="book-btn-proceed">
                     <input type="text" name="" placeholder='e.g 17 00' id="" onChange={(e) => {

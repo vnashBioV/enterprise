@@ -62,7 +62,7 @@
     border-radius: 10px;
     border: transparent;
     cursor: pointer;
-    font-size: 13.5px;
+    font-size: 1rem;
     /* box-shadow: 0px 0px 2px 0px; */
 }
 .cancel-add-btn > button:nth-child(2){
@@ -73,7 +73,7 @@
     margin-left: 10px;
     background-color: #f9dd07;
     cursor: pointer;
-    font-size: 13.5px;
+    font-size: 1rem;
 }
 .no-contacts{
     height: 100%;
@@ -137,8 +137,7 @@
     align-items: center;
     color: grey;
     height: 27px;
-    text-align: center;
-    font-size: 11px !important;
+    font-size: .8rem !important;
 }
 .loading-offload-bays > input{
     width: 36%;
@@ -151,8 +150,14 @@
     color: grey;
     height: 27px;
     /* text-align: center; */
-    font-size: 11px !important;
+    font-size: 1rem;
     padding: 0 10px;
+}
+.add-contacts-wrapper > div:nth-child(1) > h2{
+    font-size: 1.3rem;
+}
+.add-contacts-wrapper > div:nth-child(1) > div:nth-child(12) > div:nth-child(1) > div{
+    font-size: 1rem;
 }
 .css-fhpqww{
     z-index: 9999 !important;
