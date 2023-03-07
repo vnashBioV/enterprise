@@ -713,7 +713,7 @@ export default function SchedulingPage({
                     <div className='time-loads'>
                         <p>Time vs Loads</p>
                         <p style={{fontSize:".7rem"}}>Move the slider to see how it's going to affect loads and duration.</p>
-                        {/* <input 
+                        <input 
                             type="range" 
                             max={dates.length} 
                             min={1} 
@@ -726,17 +726,17 @@ export default function SchedulingPage({
                                 }
                             }}
                             className='range-input'
-                        /> */}
-                        <Box>
+                        />
+                        {/* <Box>
                             <Slider 
                                 defaultValue={50} 
                                 aria-label="Default" 
                                 valueLabelDisplay="off"
                                 onChange={(e) => {
-                                    console.log("heeeelp me win this fucker", e.target.value)
+                                    // console.log("heeeelp me win this fucker", e.target.value)
                                 }} 
                             />
-                        </Box>
+                        </Box> */}
                         <div className='track-label'>
                             <div>
                                 <p>More days</p>

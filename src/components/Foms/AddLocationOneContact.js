@@ -158,21 +158,6 @@ export default function AddLocationOneContact({
         }))
 
     }, [open, close, pubOpen, pubClose])
-
-    const theme = createTheme({
-        components: {
-          // Name of the component
-          TimePicker: {
-            styleOverrides: {
-              // Name of the slot
-              root: {
-                // Some CSS
-                background: 'blue',
-              },
-            },
-          },
-        },
-    });
     
     console.log("Operating hours", bookingArray?.details?.OperatingHours)
 
@@ -318,9 +303,11 @@ export default function AddLocationOneContact({
                 </div>
                 <div>
                     <div>
-                        {/* <input 
+                        <input 
                             className='time-pill' 
                             type="time" 
+                            min="09:00"
+                            max="18:00"
                             placeholder=''
                             onChange={e =>{setBookingArray((prevState) => ({
                                 ...prevState,
@@ -335,19 +322,10 @@ export default function AddLocationOneContact({
                                     setCheckOpsHoursOpen(true)
                                 }
                             }
-                        /> */}
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <Stack spacing={3}>
-                                    <TimePicker
-                                        value={open}
-                                        onChange={setOpen}
-                                        renderInput={(params) => <TextField {...params} />}
-                                    />
-                            </Stack>
-                        </LocalizationProvider>
+                        />
                     </div>
                     <div>
-                        {/* <input 
+                        <input 
                             className='time-pill' 
                             type="time" 
                             placeholder=''
@@ -364,16 +342,7 @@ export default function AddLocationOneContact({
                                     setCheckOpsHoursClose(true);
                                 }
                             }
-                        /> */}
-                         <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <Stack spacing={3}>
-                                <TimePicker
-                                    value={close}
-                                    onChange={setClose}
-                                    renderInput={(params) => <TextField {...params} />}
-                                />
-                            </Stack>
-                        </LocalizationProvider>
+                        />
                     </div>
                 </div>
             </div>
@@ -381,7 +350,7 @@ export default function AddLocationOneContact({
                 <h3 style={{fontSize:"1rem", marginTop:"10px", marginBottom:"12px"}}>Public Holidays</h3>
                 <div>
                     <div>
-                        {/* <input 
+                        <input 
                             className='time-pill' 
                             type="time" 
                             placeholder=''
@@ -397,19 +366,10 @@ export default function AddLocationOneContact({
                                 }))
                                 }
                             }
-                        /> */}
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <Stack spacing={3}>
-                                <TimePicker
-                                value={pubOpen}
-                                onChange={setPubOpen}
-                                renderInput={(params) => <TextField {...params} />}
-                                />
-                            </Stack>
-                        </LocalizationProvider>
+                        />
                     </div>
                     <div>
-                        {/* <input 
+                        <input 
                             className='time-pill' 
                             type="time" 
                             placeholder=''
@@ -418,27 +378,16 @@ export default function AddLocationOneContact({
                                 details:{
                                     ...prevState.details,
                                     PublicHoliday:{
-                                        ...prevState.details.PublicHoliday,
+                                        ...prevState?.details.PublicHoliday,
                                             close:e.target.value
                                     }
                                 } 
                                 }))
                                 }
                             }
-                        /> */}
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <Stack spacing={3}>
-                                <TimePicker
-                                value={pubClose}
-                                onChange={setPubClose}
-                                renderInput={(params) => <TextField {...params} />}
-                                />
-                            </Stack>
-                        </LocalizationProvider>
+                        />
                     </div>
-                   
                 </div>
-                
             </div>
             <div className='horizontal'>
                 <hr />

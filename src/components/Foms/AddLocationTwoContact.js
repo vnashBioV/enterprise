@@ -312,7 +312,7 @@ export default function AddLocationOneContact({
                 </div>
                 <div>
                     <div>
-                        {/* <input 
+                        <input 
                             className='time-pill' 
                             type="time" 
                             placeholder=''
@@ -329,28 +329,10 @@ export default function AddLocationOneContact({
                                     setCheckOpsHoursOpen(true);
                                 }
                             }
-                        /> */}
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <Stack spacing={3}>
-                                <TimePicker
-                                value={open}
-                                onChange={setOpen}
-                                renderInput={(params) => <TextField {...params} />}
-                                />
-                            </Stack>
-                        </LocalizationProvider>
+                        />
                     </div>
                     <div>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <Stack spacing={3}>
-                                <TimePicker
-                                value={close}
-                                onChange={setClose}
-                                renderInput={(params) => <TextField {...params} />}
-                                />
-                            </Stack>
-                        </LocalizationProvider>
-                        {/* <input 
+                        <input 
                             className='time-pill' 
                             type="time" 
                             placeholder=''
@@ -367,7 +349,7 @@ export default function AddLocationOneContact({
                                     setCheckOpsHoursClose(true);
                                 }
                             }
-                        /> */}
+                        />
                     </div>
                 </div>
 
@@ -378,16 +360,7 @@ export default function AddLocationOneContact({
                 <h3 style={{fontSize:"13px", marginTop:"10px", marginBottom:"12px"}}>Public Holidays</h3>
                 <div>
                     <div>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <Stack spacing={3}>
-                                <TimePicker
-                                value={pubOpen}
-                                onChange={setPubOpen}
-                                renderInput={(params) => <TextField {...params} />}
-                                />
-                            </Stack>
-                        </LocalizationProvider>
-                        {/* <input 
+                        <input 
                             className='time-pill' 
                             type="time" 
                             placeholder=''
@@ -402,10 +375,10 @@ export default function AddLocationOneContact({
                                 } 
                                 }))
                             }
-                        /> */}
+                        />
                     </div>
                     <div>
-                        {/* <input 
+                        <input 
                             className='time-pill' 
                             type="time" 
                             placeholder=''
@@ -420,16 +393,7 @@ export default function AddLocationOneContact({
                                 } 
                                 }))
                             }
-                        /> */}
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <Stack spacing={3}>
-                                <TimePicker
-                                value={pubClose}
-                                onChange={setPubClose}
-                                renderInput={(params) => <TextField {...params} />}
-                                />
-                            </Stack>
-                        </LocalizationProvider>
+                        />
                     </div>
                 </div>
                 
